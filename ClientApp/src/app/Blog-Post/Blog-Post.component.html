@@ -1,0 +1,15 @@
+  <p id="head">{{Title}}</p>
+  <p id="Body">{{Body}}</p>
+  <div class="a">
+    <div *ngFor="let comm1 of comm" class="c">{{comm1}}</div>
+    <textarea *ngIf="!Title" id="textbox3" placeholder="Enter topic name"></textarea>
+    <textarea *ngIf="!Body" id="textbox2" placeholder="About the topic"></textarea>
+    <div>
+     <button *ngIf="!Title" (click)="OnClickPost()" style="float:right">Post</button>
+    </div>
+   <textarea *ngIf="Title" id="textbox4" placeholder="comment"></textarea>
+    <div>
+     <button *ngIf="Title" (click)="OnClickComment()" style="float:right">Comment</button>
+    </div>
+  </div>
+
